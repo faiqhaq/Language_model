@@ -12,7 +12,7 @@ from langchain_community.vectorstores import Chroma
 from langchain_community.chat_models import ChatOllama
 
 # Constants
-PDF_PATH = "/home/faiq/Documents/employee/employeeManager/fypdocumentation.pdf"
+PDF_PATH = "" #Documents path
 OLLAMA_MODEL = 'llama2-uncensored'
 COLLECTION_NAME = "rag-chroma"
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
@@ -63,7 +63,8 @@ def main():
     retriever = vectorstore.as_retriever()
 
     chain = setup_rag_chain(retriever)
-
+    
+    #Quesion 
     question = 'Who are the people who worked on this project and what did each person work on?'
     answer = chain.invoke(question)
 
