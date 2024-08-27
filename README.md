@@ -1,3 +1,4 @@
 # Language_model
-RAG SYSTEM \n
+RAG SYSTEM 
+
 This is using ollama2-uncensored 
