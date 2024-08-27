@@ -65,11 +65,15 @@ def main():
     chain = setup_rag_chain(retriever)
     
     #Quesion 
-    question = 'Who are the people who worked on this project and what did each person work on?'
-    answer = chain.invoke(question)
-
-    print('~~~ Answer ~~~')
-    print(answer)
+    import time
+    question=True
+    while question:
+        question=input('ask question:')
+        if question=="exit":
+            break
+        answer = chain.invoke(question)
+        print('~~~ Answer ~~~')
+        print(f'Answer: {answer}')
 
 if __name__ == "__main__":
     main()
